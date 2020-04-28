@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "f82dc902-80a8-4cc8-bff5-0f318c27e2d9",
+		"name": "examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "update record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "address",
+							"value": "{{address}}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ipnodns.ru/api/v1/update/{{login}}/{{secret}}",
+					"protocol": "https",
+					"host": [
+						"ipnodns",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"update",
+						"{{login}}",
+						"{{secret}}"
+					]
+				},
+				"description": "Запрос для обновления ip адреса для конкретной записи"
+			},
+			"response": []
+		},
+		{
+			"name": "legacy newip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "login",
+							"value": "{{login}}",
+							"type": "text"
+						},
+						{
+							"key": "secret",
+							"value": "{{secret}}",
+							"type": "text"
+						},
+						{
+							"key": "addr",
+							"value": "{{address}}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ipnodns.ru/cgi-bin/newip.cgi",
+					"protocol": "https",
+					"host": [
+						"ipnodns",
+						"ru"
+					],
+					"path": [
+						"cgi-bin",
+						"newip.cgi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "legacy dyndns",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{pass}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{login}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ipnodns.ru/cgi-bin/dyndns.cgi?hostname={{host}}&myip={{address}}",
+					"protocol": "https",
+					"host": [
+						"ipnodns",
+						"ru"
+					],
+					"path": [
+						"cgi-bin",
+						"dyndns.cgi"
+					],
+					"query": [
+						{
+							"key": "hostname",
+							"value": "{{host}}"
+						},
+						{
+							"key": "myip",
+							"value": "{{address}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "075ab4a0-a4fa-4f55-aa88-0c98fdc029ec",
+			"key": "login",
+			"value": "zyxel",
+			"type": "string"
+		},
+		{
+			"id": "8e4e38cb-c363-4d83-82bb-47e9f35c96f8",
+			"key": "pass",
+			"value": "test",
+			"type": "string"
+		},
+		{
+			"id": "20dc13ec-0db8-4822-8a9d-cff21783b96e",
+			"key": "secret",
+			"value": "446e3676303633394862743476353248",
+			"type": "string"
+		},
+		{
+			"id": "65ec1e06-b0ba-4313-a108-2a06c762ba95",
+			"key": "address",
+			"value": "193.176.79.93",
+			"type": "string"
+		},
+		{
+			"id": "e658f8b3-b9cc-4029-b749-c2c807e561f7",
+			"key": "host",
+			"value": "test",
+			"type": "string"
+		}
+	]
+}
