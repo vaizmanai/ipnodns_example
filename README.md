@@ -7,6 +7,7 @@
 
 - [golang](https://github.com/vaizmanai/ipnodns_example/blob/master/examples/example.go)
 - [perl](https://github.com/vaizmanai/ipnodns_example/blob/master/examples/ddns.pl)
+- [mikrotik](https://github.com/vaizmanai/ipnodns_example/blob/master/examples/mikrotik.txt)
 - [postman](https://github.com/vaizmanai/ipnodns_example/blob/master/examples/postman_ipnodns.json) - детализированный вариант для самостоятельного использования
 
 Скомпилированный вариант для Windows:
