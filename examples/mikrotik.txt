@@ -1,5 +1,5 @@
 
-# ЗАМЕНИТЕ LOGIN и SECRET на реальные значения и выполните следующие строки в командной строке mikrotik'а
+# ЗАМЕНИТЕ LOGIN и SECRET на реальные значения и выполните следующие инструкции в командной строке mikrotik'а
 
 /system script add name="dyndns" source="/tool fetch url=\"https://ipnodns.ru/api/v1/update/LOGIN/SECRET\" mode=https"
 /system scheduler add name=RunStart on-event="/system script run dyndns" start-time=startup interval=60s
